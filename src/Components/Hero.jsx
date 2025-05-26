@@ -1,16 +1,15 @@
 import { Box, Card, IconButton, Typography } from "@mui/material";
 import bgImage from "../assets/hero-image.png";
 import { GitHub, LinkedIn, Mail, Phone } from "@mui/icons-material";
+import html5 from "../assets/html5.png";
+import css3 from "../assets/css3.png";
+import js from "../assets/js.png";
+import reactIcon from "../assets/react-icon.png";
+import bootstrap from "../assets/bootstrap.png";
+import mongoDb from "../assets/mongo-db.png";
+import git from "../assets/git.png";
 
-const techImages = [
-  "src/assets/html5.png",
-  "src/assets/css3.png",
-  "src/assets/js.png",
-  "src/assets/react-icon.png",
-  "src/assets/bootstrap.png",
-  "src/assets/mongo-db.png",
-  "src/assets/git.png",
-];
+const techImages = [html5, css3, js, reactIcon, bootstrap, mongoDb, git];
 
 export default function Hero() {
   return (
