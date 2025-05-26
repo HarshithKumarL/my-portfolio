@@ -1,5 +1,5 @@
 import { Box, Card, IconButton, Typography } from "@mui/material";
-import bgImage from "../assets/hero-image.png";
+import bgImage from "../assets/cover-image.jpg";
 import { GitHub, LinkedIn, Mail, Phone } from "@mui/icons-material";
 import html5 from "../assets/html5.png";
 import css3 from "../assets/css3.png";
@@ -42,41 +42,101 @@ export default function Hero() {
         <Box>
           <Typography
             variant="h3"
-            sx={{ fontSize: { xs: "1.8rem", sm: "2.5rem" }, fontWeight: 700 }}
+            sx={{
+              fontSize: { xs: "1.8rem", sm: "2.8rem" },
+              fontWeight: 900,
+              letterSpacing: "0.1em",
+              color: "#fff",
+              textTransform: "uppercase",
+              textShadow: "2px 2px 6px rgba(0,0,0,0.6)",
+            }}
           >
             Harshith Kumar
           </Typography>
+
           <Typography
-            variant="h5"
-            sx={{ fontSize: { xs: "1.2rem", sm: "1.5rem" }, mt: 1 }}
+            variant="h6"
+            sx={{
+              fontSize: { xs: "1rem", sm: "1.3rem" },
+              fontWeight: 400,
+              color: "#ccc",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              mt: 1,
+            }}
           >
             React Frontend Developer
           </Typography>
+
           <Typography
-            variant="body1"
-            sx={{ fontSize: { xs: "0.95rem", sm: "1.1rem" }, mt: 1 }}
+            variant="body2"
+            sx={{
+              fontSize: { xs: "0.9rem", sm: "1rem" },
+              mt: 1,
+              fontStyle: "italic",
+              color: "#ccc",
+              textAlign: "left", // or left, based on layout
+            }}
           >
-            I build modern, responsive, and scalable web applications.
+            Precise. Focused. Reliable. Efficient.
           </Typography>
           <Box sx={{ mt: 2 }}>
             <IconButton
-              sx={{ color: "#fff" }}
-              href="https://github.com/yourusername"
+              sx={{
+                color: "#fff",
+                p: 1,
+                transition: "background-color 0.3s ease",
+                borderRadius: "50%",
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.2)",
+                },
+              }}
+              href="https://github.com/HarshithKumarL"
               target="_blank"
             >
               <GitHub />
             </IconButton>
             <IconButton
-              sx={{ color: "#fff" }}
-              href="https://linkedin.com/in/yourprofile"
+              sx={{
+                color: "#fff",
+                p: 1,
+                transition: "background-color 0.3s ease",
+                borderRadius: "50%",
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.2)",
+                },
+              }}
+              href="https://www.linkedin.com/in/harshithkumarl/"
               target="_blank"
             >
               <LinkedIn />
             </IconButton>
-            <IconButton sx={{ color: "#fff" }} href="mailto:your@email.com">
+            <IconButton
+              sx={{
+                color: "#fff",
+                p: 1,
+                transition: "background-color 0.3s ease",
+                borderRadius: "50%",
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.2)",
+                },
+              }}
+              href="mailto:harshith0506@gmail.com"
+            >
               <Mail />
             </IconButton>
-            <IconButton sx={{ color: "#fff" }} href="tel:+1234567890">
+            <IconButton
+              sx={{
+                color: "#fff",
+                p: 1,
+                transition: "background-color 0.3s ease",
+                borderRadius: "50%",
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.2)",
+                },
+              }}
+              href="tel:9380101309"
+            >
               <Phone />
             </IconButton>
           </Box>
@@ -119,9 +179,9 @@ export default function Hero() {
             flexWrap: "nowrap",
             width: "100%",
             overflowX: "auto",
-            "&::-webkit-scrollbar": { display: "none" }, // hide scrollbar for webkit browsers
-            msOverflowStyle: "none", // IE and Edge scrollbar hiding
-            scrollbarWidth: "none", // Firefox scrollbar hiding
+            "&::-webkit-scrollbar": { display: "none" },
+            msOverflowStyle: "none",
+            scrollbarWidth: "none",
           }}
         >
           {techImages.map((src, idx) => (

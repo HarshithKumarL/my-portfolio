@@ -9,8 +9,7 @@ import {
 } from "@mui/lab";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 
-import softwareEngineerIcon from "../assets/bootstrap.png";
-import internIcon from "../assets/grad.png";
+import softwareEngineerIcon from "../assets/check.png";
 
 const experiences = [
   {
@@ -27,7 +26,7 @@ const experiences = [
     company: "eMudhra Ltd",
     description:
       "Gained hands-on experience with AWS during an internship, managing EC2 instances and S3 buckets, configuring IAM roles, and deploying scalable applications—building a strong foundation in cloud infrastructure and AWS core services.",
-    icon: internIcon,
+    icon: softwareEngineerIcon,
   },
 ];
 
@@ -103,8 +102,8 @@ export default function ProfessionalExperience() {
                   backgroundColor: "transparent",
                   boxShadow: "none",
                   p: 0,
-                  width: { xs: 36, sm: 40 },
-                  height: { xs: 36, sm: 40 },
+                  width: { xs: 30, sm: 34 },
+                  height: { xs: 30, sm: 34 },
                 }}
               >
                 <Box
@@ -112,10 +111,11 @@ export default function ProfessionalExperience() {
                   src={exp.icon}
                   alt={`${exp.title} icon`}
                   sx={{
-                    width: { xs: 30, sm: 40 },
-                    height: { xs: 30, sm: 40 },
+                    width: { xs: 24, sm: 28 },
+                    height: { xs: 24, sm: 28 },
                     borderRadius: "50%",
                     objectFit: "cover",
+                    filter: "invert(1) brightness(2)",
                   }}
                 />
               </TimelineDot>
