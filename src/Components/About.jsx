@@ -89,8 +89,9 @@ export default function AboutMe() {
           sx={{
             color: "#ccc",
             fontSize: "1rem",
-            textAlign: isSmallScreen ? "center" : "left",
+            textAlign: "justify",
             maxWidth: "700px",
+            lineHeight: 1.6,
           }}
         >
           I'm a passionate and results-driven Software Engineer with{" "}
@@ -109,7 +110,6 @@ export default function AboutMe() {
           to impactful projects that challenge and grow my skills.
         </Typography>
 
-        {/* Favorite Quote Section */}
         <Typography
           variant="h6"
           sx={{
