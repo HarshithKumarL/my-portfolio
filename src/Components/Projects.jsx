@@ -6,8 +6,10 @@ import {
   CardMedia,
   useMediaQuery,
   useTheme,
+  Tooltip,
 } from "@mui/material";
 import img1 from "../assets/aks-travels.png";
+import img2 from "../assets/travel-blog.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const projects = [
@@ -18,15 +20,18 @@ const projects = [
     imageUrl: img1,
     demoLink: "https://aks-travels.vercel.app/",
     codeLink: "https://github.com/HarshithKumarL/AKSTravels",
-    techStack: ["React", "EmailJS","Vercel"],
+    techStack: ["React", "EmailJS", "Vercel"],
+    privateRepo: false,
   },
   {
-    title: "Project Two",
-    description: "Cool project two description.",
-    imageUrl: img1,
-    demoLink: "https://demo.projecttwo.com",
-    codeLink: "https://github.com/user/projecttwo",
-    techStack: ["HTML", "CSS", "JavaScript"],
+    title: "Travel Blog",
+    description:
+      "My first learning project — a basic travel blog website built using HTML and CSS.",
+    imageUrl: img2,
+    demoLink: "",
+    codeLink: "https://github.com/HarshithKumarL/TravelBolgHTMLCSS",
+    techStack: ["HTML", "CSS"],
+    privateRepo: false,
   },
 ];
 
@@ -131,16 +136,41 @@ export default function ProjectList() {
                 >
                   Demo
                 </Button>
-                <Button
-                  variant="outlined"
-                  color="success"
-                  href={project.codeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  startIcon={<GitHubIcon />}
-                >
-                  Code
-                </Button>
+                {project.privateRepo ? (
+                  <Tooltip title="Sorry, this repository is private.">
+                    <span>
+                      <Button
+                        variant="outlined"
+                        color="success"
+                        disabled
+                        startIcon={<GitHubIcon />}
+                        sx={{
+                          cursor: "not-allowed",
+                          pointerEvents: "none",
+                          color: "#ccc",
+                          borderColor: "#ccc",
+                          "&.Mui-disabled": {
+                            color: "#ccc",
+                            borderColor: "#ccc",
+                          },
+                        }}
+                      >
+                        Code
+                      </Button>
+                    </span>
+                  </Tooltip>
+                ) : (
+                  <Button
+                    variant="outlined"
+                    color="success"
+                    href={project.codeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    startIcon={<GitHubIcon />}
+                  >
+                    Code
+                  </Button>
+                )}
               </Box>
             </Box>
           </Box>
